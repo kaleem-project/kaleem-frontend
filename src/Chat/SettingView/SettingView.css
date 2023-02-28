@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+}
+
+.MeetingRow {
+  display: flex;
+}
+
+.mettingDraw {
+  position: absolute;
+  bottom: 3.5rem;
+  right: 5rem;
+  width: 20rem;
+}

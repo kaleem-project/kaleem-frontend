@@ -1,0 +1,11 @@
+.DrawerToggle svg {
+  height: 2.6rem;
+  color: #845ef7;
+  stroke: #845ef7;
+  transition: all 0.3s;
+}
+
+.DrawerToggle:hover svg {
+  color: #493091;
+  stroke: #493091;
+}

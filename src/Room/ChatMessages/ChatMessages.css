@@ -1,0 +1,82 @@
+.main {
+  background-color: #f3f0ff;
+
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  opacity: 100;
+  transition: all 0.5s;
+  height: 100%;
+
+  display: grid;
+  align-items: end;
+}
+
+.upBar {
+  align-self: start;
+  background-color: #ede6ff;
+  padding: 0.8rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.upBar svg {
+  width: 2.2rem;
+  margin-right: 1.2rem;
+  color: #7950f2;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.upBar svg:hover {
+  color: #5f3dc4;
+}
+
+.titleChat {
+  font-size: 2.4rem;
+  color: #181030;
+  padding: 1.2rem 1rem;
+}
+
+.downBar {
+  display: grid;
+  background-color: #ede6ff;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  column-gap: 6px;
+  padding: 2rem 1rem;
+}
+
+.reply,
+.replyClicked {
+  border: 1.6px solid #241849;
+  border-radius: 10rem;
+  padding: 0.8rem 1.6rem;
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem;
+  transition: all 0.5s;
+}
+
+.sendIcon,
+.sendIconChange {
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.sendIconChange {
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 7px;
+
+  fill: #fff;
+  background-color: #7950f2;
+  border-radius: 100px;
+}
+
+.sendIconChange:hover {
+  background-color: #6140c2;
+}

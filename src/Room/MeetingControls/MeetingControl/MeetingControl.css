@@ -1,0 +1,52 @@
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltipText,
+.tooltipTextShare,
+.tooltipTextRect {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #9775fa;
+  color: #fff;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  padding: 0.8rem 0.9rem;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.tooltipText::before,
+.tooltipTextShare::before,
+.tooltipTextRect::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 0.8rem solid;
+  border-color: #9775fa#0000 #0000 #0000;
+}
+
+.tooltip:hover .tooltipText {
+  top: -120%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip:hover .tooltipTextShare {
+  top: -70%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip:hover .tooltipTextRect {
+  top: -100%;
+  visibility: visible;
+  opacity: 1;
+}

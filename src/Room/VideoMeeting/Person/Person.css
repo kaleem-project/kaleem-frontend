@@ -1,0 +1,48 @@
+.personComponent,
+.clickedPersonComponent {
+  background-color: #fff;
+  width: 21rem;
+  height: 11rem;
+  overflow: hidden;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0);
+
+  border-radius: 1rem;
+  display: flex;
+  font-size: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #fff;
+
+  transition: all 0.3s;
+}
+.clickedPersonComponent {
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.08);
+  border: 2px solid #392576;
+}
+
+.personComponent:hover,
+.clickedPersonComponent:hover {
+  gap: 7px;
+  font-size: 1.2rem;
+  color: #1c123b;
+}
+
+.personComponent:hover img,
+.clickedPersonComponent:hover img {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.noImg {
+  width: 5.8rem;
+  height: 5.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #e4e2ec;
+  color: #392576;
+  font-size: 3.2rem;
+}

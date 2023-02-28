@@ -1,0 +1,80 @@
+.nav {
+  background-color: #f3f0ff;
+  grid-column: 1/-1;
+  grid-row: 1;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.kaleem {
+  font-size: 2.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #241849;
+}
+
+.imgLogo {
+  margin-left: 10px;
+}
+
+.navEnd {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navSearch {
+  cursor: pointer;
+  background-color: #f3f0ff;
+  width: 4.4rem;
+  height: 4.4rem;
+  transition: all 0.4s;
+  padding: 0.5rem;
+}
+
+.navSearch:hover {
+  background-color: #d0bfff;
+  border-radius: 100px;
+}
+
+.navNoti {
+  width: 4.4rem;
+  height: 4.4rem;
+  transition: all 0.4s;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.navNoti:hover {
+  background-color: #d0bfff;
+  border-radius: 100px;
+}
+
+.trash {
+  display: inline-block;
+  background-color: #7950f2;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 7px;
+  margin-left: 0.8rem !important;
+  text-decoration: none;
+  transition: all 0.4s;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.trash:hover,
+.trash:active {
+  background-color: #5f3dc4;
+}

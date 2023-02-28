@@ -1,0 +1,62 @@
+.section_featured {
+  padding: 4.8rem 0 4.8rem 0;
+}
+
+.heading_featured_in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  color: #888;
+}
+
+.container {
+  /* 1140px */
+  width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.logos img {
+  height: 4.8rem;
+  filter: brightness(0);
+  opacity: 50%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.logos img:hover {
+  filter: brightness(1);
+  opacity: 100%;
+  height: 6.4rem;
+}
+
+.logoText {
+  font-size: 2rem;
+  color: #15aabf;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.djangoColor {
+  color: #2ba977;
+}
+.reactColor {
+  color: #61dafb;
+}
+.mongoColor {
+  color: #599636;
+}
+
+.logos img:hover ~ .logoText {
+  opacity: 100%;
+}

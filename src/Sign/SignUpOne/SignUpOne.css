@@ -1,0 +1,204 @@
+.sideFlex {
+  display: flex;
+}
+
+.inputFlex {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.flexError,
+.flexErrorBig {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  position: relative;
+}
+
+.flexError i,
+.flexErrorBig i {
+  position: absolute;
+  color: #f03e3e;
+
+  top: 12%;
+  left: 90%;
+  font-size: 1.6rem;
+}
+
+.flexErrorBig i {
+  left: 95.5%;
+}
+
+.signText {
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  margin-left: 0.53rem;
+  font-size: 1.6rem;
+  color: #f3f0ff;
+}
+
+.form,
+.formUp {
+  width: 50rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #faf9ff;
+  padding: 3.2rem 6rem 0 6rem;
+  border-radius: 5px;
+  margin-right: -3rem;
+}
+
+.formUp {
+  animation: slideaway 200ms;
+  display: none;
+}
+
+.pageNumber {
+  font-size: 1.4rem;
+  color: #7a7880;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.createText {
+  font-size: 3.2rem;
+  color: #221646;
+  margin-bottom: 1.5rem;
+}
+
+.signUpText {
+  font-size: 1.4rem;
+  color: #221646;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.signInText {
+  font-size: 1.4rem;
+  color: #221646;
+  margin-bottom: 3.6rem;
+
+  gap: 0.3rem;
+}
+
+.signInButton:link,
+.signInButton:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: #7950f2;
+}
+
+.signInButton:hover,
+.signInButton:active {
+  text-decoration: underline #7950f2;
+}
+
+.labelText {
+  font-size: 1.2rem;
+  color: #616066;
+  margin-bottom: 0.3rem;
+}
+
+.input,
+.inputName,
+.inputError {
+  background-color: #faf9ff;
+  padding-left: 30px;
+  color: #313033;
+  padding: 0.5rem 0;
+  border: none;
+  box-shadow: 0 1px 0.2px #aaa8b3;
+  font-family: 'Adobe Clean UX', sans-serif;
+  font-size: 1.2rem;
+  transition: all 0.4s;
+}
+
+.name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.5rem;
+}
+
+.input:focus,
+.inputName:focus,
+.inputError {
+  outline: none;
+  box-shadow: 0 1.6px 0 #7950f2;
+}
+
+.inputError {
+  box-shadow: 0 1.6px 0px #f03e3e;
+}
+
+.errorMsg,
+.errorMsgSelect {
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+  color: #f03e3e;
+}
+
+.errorMsgSelect {
+  margin-bottom: 0;
+}
+
+.formButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.continue {
+  text-decoration: none;
+  color: #faf9ff;
+  background-color: #7950f2;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  border-radius: 100px;
+  margin: 3rem 0 2.5rem 0;
+  transition: all 0.3s;
+}
+.continue:hover {
+  background-color: #5f3dc4;
+}
+
+.select,
+.selectError {
+  width: 100%;
+  border: none;
+  background-color: #faf9ff;
+  font-size: 1.2rem;
+  color: #313033;
+  box-shadow: 0 1px 0.2px #aaa8b3;
+
+  font-family: 'Adobe Clean UX', sans-serif;
+
+  padding: 1.85rem 0 0.8rem 0;
+
+  transition: all 0.4s;
+}
+
+.selectError {
+  box-shadow: 0 1.6px 0 #f03e3e;
+}
+
+.select:focus,
+.selectError:focus {
+  outline: none;
+  box-shadow: 0 1.6px 0 #7950f2;
+}
+
+@keyframes slideaway {
+  from {
+    display: block;
+  }
+  to {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}

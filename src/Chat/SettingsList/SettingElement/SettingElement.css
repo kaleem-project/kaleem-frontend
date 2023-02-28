@@ -1,0 +1,30 @@
+.element,
+.elementClicked {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+  padding: 2rem;
+  transition: background-color 0.3s;
+  transition: all 0.4s;
+}
+.elementClicked {
+  background-color: #7950f2;
+}
+
+.element:hover {
+  background-color: #d7cbfb;
+  cursor: pointer;
+}
+
+.name,
+.nameClicked {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  color: #898497;
+  transition: all 0.4s;
+}
+
+.nameClicked {
+  color: #fff;
+}

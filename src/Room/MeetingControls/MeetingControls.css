@@ -1,0 +1,22 @@
+.controls,
+.controlsToggle {
+  position: absolute;
+  width: 35%;
+  background-color: #e5dbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 2rem 0;
+  transition: all 0.3s;
+
+  bottom: 0;
+}
+
+.controlsToggle {
+  transform: translateY(100vh);
+  width: 0;
+  height: 0;
+}

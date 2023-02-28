@@ -1,0 +1,88 @@
+.main {
+  text-decoration: none;
+  color: #000;
+}
+
+.meeting {
+  width: 35rem;
+  height: 20rem;
+  border: 2px solid #7950f2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 5rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.header {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+}
+
+.meeting:hover {
+  border: 2px solid #5f3dc4;
+}
+
+.meeting:hover .header {
+  color: #fff;
+  text-shadow: none;
+}
+
+.meeting svg {
+  transform: translateY(50%);
+  height: 2.6rem;
+  z-index: 3;
+  transition: all 0.5s;
+}
+
+.meeting:hover .meeting svg {
+  opacity: 0;
+}
+
+.createImg {
+  position: absolute;
+  width: 0;
+  z-index: 1;
+  justify-self: flex-start;
+  transition: all 0.8s;
+}
+
+.meeting:hover .createImg {
+  transform: translateY(-85%);
+  width: 120px;
+}
+
+.back {
+  z-index: 2;
+  width: 100%;
+  height: 38%;
+  background-color: #7950f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back p {
+  color: #7950f2;
+  font-size: 1.6rem;
+  transition: all 0.5s;
+  margin-bottom: 0;
+}
+
+.meeting:hover .back {
+  transition: all 0.5s;
+  height: 30%;
+  background-color: #5f3dc4;
+}
+
+.meeting:hover .back p {
+  color: #fff;
+}
