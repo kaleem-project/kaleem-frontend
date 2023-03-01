@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
+import {SHA3} from 'sha3';
 import classes from './Sign.css';
 import SignUpOne from './SignUpOne/SignUpOne';
 import SignIn from './SignIn/SignIn';
@@ -33,6 +34,12 @@ class Sign extends Component {
 
   setInput = (event, id) => {
     const input = event.target.value;
+    if (id === 'password') {
+      const hash = new SHA3(512);
+      hash.update(input);
+      this.updateUserState(id, hash.digest('hex'));
+      return;
+    }
     this.updateUserState(id, input);
   };
 
@@ -121,6 +128,7 @@ class Sign extends Component {
             signInAppear={HandleSignIn}
             signIn={this.state.signIn}
             email={this.state.user['email']}
+            username={this.state.user['username']}
           />
 
           <SignIn disappear={HandleSignIn} signIn={this.state.signIn} />

@@ -11,6 +11,7 @@ function SignUpOne(props) {
     startCheck,
     passLength,
     email,
+    username,
   } = props;
 
   const validateEmail = () => {
@@ -20,6 +21,20 @@ function SignUpOne(props) {
         /^(([^&lt;&gt;()[\]\\.,;:\s@"]+(\.[^&lt;&gt;()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
+
+  const validateUser = () => {
+    return String(username)
+      .toLowerCase()
+      .match(/^[a-zA-Z0-9]+$/);
+  };
+
+  if (validateUser() === null && startCheck && username.length !== 0) {
+    emptyField[2] = 'Enter valid username';
+  } else if (username.length === 0 && startCheck) {
+    emptyField[2] = 'Please enter username';
+  } else {
+    emptyField[2] = '';
+  }
 
   if (validateEmail() === null && startCheck && email.length !== 0) {
     emptyField[3] = 'Enter valid email';
@@ -50,8 +65,16 @@ function SignUpOne(props) {
   // }
 
   const InputChecker = (id, emptyFieldIndex) => {
-    if (id === 'firstName' || id === 'lastName' || id === 'username') {
+    if (id === 'firstName' || id === 'lastName') {
       return renderErrorIcon(id) === '';
+    }
+
+    if (id === 'username') {
+      return (
+        renderErrorIcon(id) === '' ||
+        emptyField[emptyFieldIndex] !== '' ||
+        (validateUser() === null && startCheck)
+      );
     }
     if (id === 'password') {
       return (
