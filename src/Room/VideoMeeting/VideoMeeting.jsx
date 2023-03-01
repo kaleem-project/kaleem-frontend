@@ -1,8 +1,6 @@
 import React from 'react';
 import classes from './VideoMeeting.css';
 import Person from './Person/Person';
-import img1 from '../../assets/ProfileImgs/2.jpg';
-import img2 from '../../assets/ProfileImgs/4.jpg';
 import TopArrow from '../../assets/Svg/TopArrow';
 
 function VideoMeeting(props) {

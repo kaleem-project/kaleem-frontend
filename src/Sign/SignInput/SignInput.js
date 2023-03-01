@@ -3,7 +3,6 @@ import classes from './SignInput.css';
 import Auxiliary from '../../components/Auxiliary/Auxiliary';
 function SignInput(props) {
   const check = props.checkMethod(props.id, props.emptyIndex);
-  console.log(check);
   return (
     <Auxiliary>
       <div className={classes.labelText}>{props.label}</div>

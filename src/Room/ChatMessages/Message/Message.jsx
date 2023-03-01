@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Message.css';
-import Person from '../../VideoMeeting/Person/Person';
 
 function Message(props) {
   let display = (
@@ -9,7 +8,9 @@ function Message(props) {
     </div>
   );
   if (props.path !== undefined) {
-    display = <img src={props.path} className={classes.profileImg} />;
+    display = (
+      <img src={props.path} className={classes.profileImg} alt="Profile" />
+    );
   }
   return (
     <div className={classes.Message}>

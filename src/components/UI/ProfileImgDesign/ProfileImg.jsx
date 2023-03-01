@@ -7,7 +7,7 @@ function ProfileImg(props) {
     <img
       className={classes.profileImg}
       src={require(`../../../assets/ProfileImgs/img.jpg`)}
-      alt="Profile Image"
+      alt="Profile"
     />
   );
 }

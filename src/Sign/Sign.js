@@ -33,45 +33,8 @@ class Sign extends Component {
 
   setInput = (event, id) => {
     const input = event.target.value;
-    if (id === 'type') {
-      if (event.target.value == 1) this.updateUserState(id, 'Deaf');
-      else if (event.target.value == 2) this.updateUserState(id, 'Non-Deaf');
-    } else {
-      this.updateUserState(id, input);
-    }
+    this.updateUserState(id, input);
   };
-
-  // submit = (e) => {
-  //   e.preventDefault();
-  //   Axios.post('http://127.0.0.1:5000/api/v3/signup', {
-  //     // prettier-ignore
-  //     'first': this.state.firstName,
-  //     // prettier-ignore
-  //     'sur': this.state.lastName,
-  //     // prettier-ignore
-  //     'user': this.state.username,
-  //     // prettier-ignore
-  //     'email': this.state.email,
-  //     // prettier-ignore
-  //     'password': this.state.password,
-  //     // prettier-ignore
-  //     'type': this.state.type,
-  //     // prettier-ignore
-  //     'bio': this.state.bio,
-  //     // prettier-ignore
-  //     'facebookLink': this.state.facebookLink,
-  //     // prettier-ignore
-  //     'twitterLink': this.state.twitterLink,
-  //     // prettier-ignore
-  //     'githubLink': this.state.githubLink,
-  //     // prettier-ignore
-  //     'youtubeLink': this.state.youtubeLink,
-  //     // prettier-ignore
-  //     'linkedinLink': this.state.linkedinLink,
-  //   })
-  //     .then((res) => console.log(res))
-  //     .catch((error) => console.log(error));
-  // };
 
   render() {
     const handleEmptyFields = () => {
@@ -91,6 +54,7 @@ class Sign extends Component {
         if (user[field] !== '' && field !== 'email' && field !== 'password') {
           emptyField[index] = '';
         }
+        return 'Check over';
       });
 
       this.setState({emptyField});
@@ -110,46 +74,25 @@ class Sign extends Component {
 
     const renderSignControler = (event, page) => {
       const fields = this.state.emptyField;
+      handleEmptyFields();
 
-      if (page === 'SignInAppear') {
-        this.state.signUpOne === 'formEmpty'
-          ? this.setState({signUpOne: 'formUp', signIn: 'formEmpty'})
-          : this.setState({signUpOne: 'formUp', signIn: 'formAppear'});
-      }
+      const empty = fields.reduce((acc, curfield) => {
+        return curfield === '' ? acc + 1 : acc + 0;
+      }, 0);
 
-      if (page === 'SignUpTwo') {
-        handleEmptyFields();
+      // set number of empty fields if === 0 no field empty
+      // use normal animation
+      // if not 0 use edited animation
+      this.setState({emptyNum: empty, startCheck: true});
 
-        const empty = fields.reduce((acc, curfield) => {
-          return curfield === '' ? acc + 1 : acc + 0;
-        }, 0);
-
-        // set number of empty fields if === 0 no field empty
-        // use normal animation
-        // if not 0 use edited animation
-        this.setState({emptyNum: empty, startCheck: true});
-
-        // console.log(this.state.emptyNum, empty);
-
-        empty === 5
-          ? this.setState({signUpOne: 'formDown', signUpTwo: 'formAppear'})
-          : this.setState({signUpOne: 'formEmpty'});
-      }
-
-      if (page === 'SignUpOne') {
-        this.state.emptyNum !== 5
-          ? this.setState({signIn: 'form', signUpOne: 'formEmpty'})
-          : this.setState({signIn: 'form', signUpOne: 'form'});
-      }
-
-      if (page === 'SignUpToOne') {
-        this.submit(event);
-      }
-
-      if (page === 'BackToOne') {
-        this.state.emptyNum !== 5
-          ? this.setState({signUpOne: 'formEmpty', signUpTwo: 'form'})
-          : this.setState({signUpOne: 'form', signUpTwo: 'form'});
+      if (empty === 5) {
+        console.log('Clicked');
+        Axios.post('http://192.168.1.12:8080/api/v3/database/accounts', {
+          // prettier-ignore
+          user: this.state.user,
+        })
+          .then((res) => console.log(res))
+          .catch((error) => console.log(error));
       }
     };
 
@@ -161,6 +104,7 @@ class Sign extends Component {
               <img
                 className={classes.logo}
                 src={require('../assets/Logo/logoWhite.svg')}
+                alt="Kaleem logo"
               />
               <div className={classes.kaleem}>KALEEM</div>
             </div>

@@ -56,35 +56,6 @@ class Chat extends Component {
   };
 
   render() {
-    const opa = this.state.messageOpacity;
-    let {clickedChatIndex, indexHover} = this.state;
-
-    const chatHiddenEffect = () => {
-      if (clickedChatIndex === null) return indexHover;
-      return clickedChatIndex;
-    };
-    const friend = this.state.friends[parseInt(chatHiddenEffect())];
-
-    const onChangeSendIcon = (event) => {
-      event.target.value === ''
-        ? this.setState({sendButton: 'sendIcon'})
-        : this.setState({sendButton: 'sendIconChange'});
-    };
-
-    const infoBlockTextOver = () => {
-      const hover = this.state.controlBlockHover;
-      if (!hover) {
-        this.setState({controlBlockHover: true});
-      }
-    };
-
-    const infoBlockTextLeave = () => {
-      const hover = this.state.controlBlockHover;
-      if (hover) {
-        this.setState({controlBlockHover: false});
-      }
-    };
-
     return (
       <div className={classes.container}>
         <Nav toggle={this.drawerToggleHandler} />
@@ -100,25 +71,9 @@ class Chat extends Component {
         />
 
         <SettingView toggle={this.state.drawerToggle} />
-
-        <img
-          className={classes.mettingDraw}
-          src={require(`../assets/Images/mettingDraw.png`)}
-          alt="Profile Image"
-        />
       </div>
     );
   }
 }
 
 export default Chat;
-
-{
-  /* <ChatInfo
-          friend={friend}
-          chatHiddenEffect={chatHiddenEffect}
-          infoBlockTextOver={infoBlockTextOver}
-          infoBlockTextLeave={infoBlockTextLeave}
-          controlBlockHover={this.state.controlBlockHover}
-        /> */
-}

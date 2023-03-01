@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './SettingsList.css';
-import Person from '../Person/Person';
 import Account from '../../components/UI/account/Account';
 import SettingElement from './SettingElement/SettingElement';
 
@@ -17,8 +16,7 @@ import SettingsSolid from '../../assets/SvgSolid/Settings';
 import PeopleSolid from '../../assets/SvgSolid/People';
 
 function SettingsList(props) {
-  const {friends, onMouseOver, onMouseLeave, settingClicked, settingName} =
-    props;
+  const {settingClicked, settingName} = props;
 
   console.log(settingName);
   const SettingsList = [

@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './SettingElement.css';
-import Settings from '../../../assets/Svg/Settings';
 function SettingElement(props) {
   return (
     <div

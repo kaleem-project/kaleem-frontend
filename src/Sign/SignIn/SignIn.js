@@ -2,7 +2,8 @@ import React from 'react';
 import classes from './SignIn.css';
 
 function SignIn(props) {
-  const {signIn, renderSignControler} = props;
+  // renderSignControler
+  const {signIn} = props;
   return (
     <form className={signIn ? classes.formUp : classes.form}>
       <div className={classes.createText}>Sign In</div>

@@ -13,10 +13,6 @@ function SignUpOne(props) {
     email,
   } = props;
 
-  const isNumeric = (value) => {
-    return /^\d+$/.test(value);
-  };
-
   const validateEmail = () => {
     return String(email)
       .toLowerCase()
@@ -54,11 +50,10 @@ function SignUpOne(props) {
   // }
 
   const InputChecker = (id, emptyFieldIndex) => {
-    if (id === 'firstName' || id === 'lastName' || id == 'username') {
+    if (id === 'firstName' || id === 'lastName' || id === 'username') {
       return renderErrorIcon(id) === '';
     }
     if (id === 'password') {
-      console.log('pass');
       return (
         renderErrorIcon(id) === '' ||
         emptyField[emptyFieldIndex] !== '' ||
@@ -67,7 +62,6 @@ function SignUpOne(props) {
     }
 
     if (id === 'email') {
-      console.log('Email', emptyFieldIndex);
       return (
         renderErrorIcon(id) === '' ||
         emptyField[emptyFieldIndex] !== '' ||
@@ -119,11 +113,7 @@ function SignUpOne(props) {
       <div className={classes.signUpText}>Sign up with email</div>
       <div className={`${classes.signInText} ${classes.sideFlex}`}>
         <div>Already have an account?</div>
-        <a
-          href="#"
-          onClick={props.signInAppear}
-          className={classes.signInButton}
-        >
+        <a onClick={props.signInAppear} className={classes.signInButton}>
           Sign in
         </a>
       </div>

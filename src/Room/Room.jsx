@@ -4,11 +4,9 @@ import VideoMeeting from './VideoMeeting/VideoMeeting';
 import MeetingControls from './MeetingControls/MeetingControls';
 import ChatMessage from './ChatMessages/ChatMessages';
 import TempProfile from './TempProfile/TempProfile';
-import Person from './VideoMeeting/Person/Person';
 
 import person1 from '../assets/ProfileImgs/2.jpg';
 import person2 from '../assets/ProfileImgs/4.jpg';
-import person3 from '../assets/ProfileImgs/6.jpg';
 
 class Room extends Component {
   state = {

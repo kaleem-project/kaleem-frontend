@@ -10,6 +10,7 @@ function Nav(props) {
         <img
           src={require('../../assets/Logo/logo.svg')}
           className={classes.imgLogo}
+          alt="Kaleem logo"
         />
         <div className={classes.kaleem}>KALEEM</div>
       </div>
